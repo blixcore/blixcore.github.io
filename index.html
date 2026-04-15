@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLIX | HEAVY METAL</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS VARIABLES - THE CORE OF THE DESIGN */
+        :root {
+            --bg: #050505;
+            --text: #ffffff;
+            --accent: #ff3e3e; /* Blood Red */
+            --secondary: #222222;
+            --transition: 0.2s ease-in-out;
+        }
+
+        [data-theme="light"] {
+            --bg: #e0e0e0;
+            --text: #121212;
+            --accent: #b20000;
+            --secondary: #cccccc;
+        }
+
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 2px solid var(--secondary);
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 5px;
+            font-weight: 700;
+        }
+
+        .theme-toggle {
+            cursor: pointer;
+            background: none;
+            border: 1px solid var(--text);
+            color: var(--text);
+            padding: 5px 12px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        /* HERO SECTION */
+        header {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1514525253361-b83f859b73c0?auto=format&fit=crop&q=80&w=1000') no-repeat center center/cover;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(5rem, 15vw, 10rem);
+            line-height: 0.8;
+            margin-bottom: 1rem;
+            text-shadow: 5px 5px 0px var(--accent);
+        }
+
+        /* MODULAR SECTIONS */
+        section {
+            padding: 4rem 5%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            border-left: 8px solid var(--accent);
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* MUSIC LINKS */
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .music-link {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 3rem;
+            transition: transform 0.1s;
+        }
+
+        .music-link:hover {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+
+        .music-link p {
+            font-size: 0.9rem;
+            font-family: 'Oswald', sans-serif;
+            margin-top: 0.5rem;
+        }
+
+        /* TOUR MODULE */
+        .tour-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        .btn {
+            background: var(--text);
+            color: var(--bg);
+            padding: 0.5rem 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BLIX</div>
+        <button class="theme-toggle" id="themeSwitcher">Mode: System</button>
+    </nav>
+
+    <header>
+        <h1>BLIX</h1>
+        <p style="letter-spacing: 10px;">LOUD // RAW // METAL</p>
+    </header>
+
+    <section id="music">
+        <h2>Listen</h2>
+        <div class="music-grid">
+            <a href="#" class="music-link"><i class="fab fa-spotify"></i><p>Spotify</p></a>
+            <a href="#" class="music-link"><i class="fab fa-apple"></i><p>Apple</p></a>
+            <a href="#" class="music-link"><i class="fab fa-bandcamp"></i><p>Bandcamp</p></a>
+            <a href="#" class="music-link"><i class="fab fa-youtube"></i><p>YouTube</p></a>
+        </div>
+    </section>
+
+    <section id="tour">
+        <h2>Live Rituals</h2>
+        <div class="tour-row">
+            <div><strong>AUG 12</strong> - London, UK</div>
+            <a href="#" class="btn">Gigs</a>
+        </div>
+        <div class="tour-row">
+            <div><strong>AUG 15</strong> - Berlin, DE</div>
+            <a href="#" class="btn">Gigs</a>
+        </div>
+        <div class="tour-row">
+            <div><strong>SEP 02</strong> - Oslo, NO</div>
+            <a href="#" class="btn">Gigs</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BLIX METAL. ALL RIGHTS DESTROYED.</p>
+    </footer>
+
+    <script>
+        const switcher = document.getElementById('themeSwitcher');
+        const html = document.documentElement;
+        
+        // Check for saved preference
+        const savedTheme = localStorage.getItem('theme') || 'system';
+        applyTheme(savedTheme);
+
+        switcher.addEventListener('click', () => {
+            let current = html.getAttribute('data-theme');
+            let next = 'dark';
+            
+            if (current === 'dark') next = 'light';
+            else if (current === 'light') next = 'dark';
+
+            applyTheme(next);
+            localStorage.setItem('theme', next);
+        });
+
+        function applyTheme(theme) {
+            if (theme === 'system') {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                html.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+                switcher.innerText = "Mode: System";
+            } else {
+                html.setAttribute('data-theme', theme);
+                switcher.innerText = `Mode: ${theme}`;
+            }
+        }
+
+        // Listen for system changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (localStorage.getItem('theme') === 'system') {
+                applyTheme('system');
+            }
+        });
+    </script>
+</body>
+</html>
